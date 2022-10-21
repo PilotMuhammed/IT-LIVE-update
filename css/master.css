@@ -24,6 +24,7 @@ nav{
 }
 .nav-logo{
     color: var(--Red);
+    font-size: 16px;
     font-weight: 600;
 }
 
@@ -225,6 +226,11 @@ nav{
     box-sizing: border-box;
     transition: 1s;
 }
+@media (max-width:499px){
+    .statements .prg{
+        padding: 100px 50px;
+    }
+}
 .prg>p{
     color: var(--White);
     text-transform: uppercase;
@@ -256,6 +262,19 @@ nav{
     height: 100%;
     transition: 1s;
     margin: 0%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--LinearGradient);
+}
+.slider .first{
+    background-image: url("../image/1.jpg"), url("../image/4.jpg");
+}
+.slider .second{
+    background-image: url("../image/2.jpg"), url("../image/5.jpg");
+}
+.slider .third{
+    background-image: url("../image/3.jpg"), url("../image/1.jpg");
 }
 .slide img{
     width: 100%;

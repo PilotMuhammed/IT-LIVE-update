@@ -7,6 +7,7 @@
     --LightGray : #ccc;
     --NavShadow: rgb(0, 0, 0, .1) 0px 3px 5px;
     --Mrg15 : 15px;
+    --LinearGradient: linear-gradient(60deg, rgba(0,0,0) 0%, rgba(224,0,0) 100%);
 }
 
 html{
@@ -28,6 +29,9 @@ body{
     transition: 0.3s ease-out;
     font-family: 'Inter', sans-serif;
     background-color: var(--White);
+}
+main{
+    padding: 100px 50px;
 }
 .btn{
     margin: 0 var(--Mrg15);
@@ -57,5 +61,7 @@ body{
 }
     /* PHONE */
 @media (max-width:499px){
-
+    html{
+        font-size: 12px;
+    }
 }
