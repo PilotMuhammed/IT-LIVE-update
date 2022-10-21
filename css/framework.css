@@ -53,6 +53,10 @@ main{
     height: 30px;
     width: 30px;
 }
+::selection{
+    background-color: var(--Red);
+    color: var(--White);
+}
     /* TABLET */
 @media (max-width:750px){
     :root{
