@@ -1,7 +1,3 @@
-body{
-    height: 200vh;
-}
-
     /*  START NAV  */
 nav{
     position: fixed;
@@ -27,7 +23,6 @@ nav{
     font-size: 16px;
     font-weight: 600;
 }
-
 .nav-items{
     display: flex;
     justify-content: space-between;
@@ -56,7 +51,6 @@ nav{
     display: flex;
     align-items: center;
 }
-
 .lang-list{
     background-color: var(--Gray);
     list-style: none;
@@ -98,7 +92,6 @@ nav{
 }
 
     /*  MOBILE NAV    */
-    
 .mobil-nav{
     display: none;
 }
@@ -338,4 +331,91 @@ nav{
 }
 #radio3:checked ~ .navigation-manual .slideBtn3{
     background: var(--Gray);
+}
+    /*  END CAROUSEL SLIDER & HEADER    */
+
+    /*    SPEAKERS      */
+.speakers-sec {
+    background-color: var(--LightGray);
+}
+.sec-title{
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--Gray);
+    margin-bottom: 30px;
+}
+.cards-container{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-wrap:nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    /* overflow: hidden; */
+    position: relative;
+    background-color: blueviolet;
+}
+.cards-container::-webkit-scrollbar {
+    display: none;
+}
+.cards-container:not(:last-child){
+    margin-right: 30px;
+}
+.speaker-card{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    /* background-color: aqua; */
+    /* display: inline-block; */
+    position: relative;
+    /* margin-right: 30px; */
+}
+.speaker-img{
+    width: 100%;
+    height: auto;
+}
+.speaker-info{
+    background: linear-gradient(0deg, rgba(0,0,0,.6) 0%, rgba(224,0,0, 0) 100%);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 10px 15px;
+    translate: 0 100%;
+    transition: all .3s ease-out;
+}
+.speaker-card:hover .speaker-info{
+    translate: 0 0%;
+}
+.speaker-info *{
+    color: var(--White);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+
+
+    /*   FOOTER    */
+footer{
+    background-color: var(--Gray);
+    color: var(--White);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px;
+}
+footer :not(:last-child){
+    margin-bottom: 30px;
+}
+footer :not(:last-child) a{
+    margin: 0 15px;
+}
+footer div a{
+    color: var(--White);
+    text-transform: capitalize;
 }

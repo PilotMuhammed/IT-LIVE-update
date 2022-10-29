@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>IT.LIVE</title>
 
     <link rel="stylesheet" href="./css/framework.css">
     <link rel="stylesheet" href="./css/master.css">
+
+    
 </head>
 <body>
     <!--    START NAV   -->
@@ -23,10 +25,7 @@
         </div>
 
         <div class="nav-btns">
-            <a href="./html/login.html" class="login prim txt btn">
-                sign in
-            </a>
-
+            <a href="./html/login.html" class="login prim txt btn">register</a>
             <label class="lang click btn" for="langClick">
                 <input type="checkbox" id="langClick"/>
                 <img src="./icon/world.svg" alt="world_icon" />
@@ -48,7 +47,7 @@
             </div>
         
             <div class="mobil-nav-slide">
-                <a href="./html/login.html" class="login prim txt btn">sign in</a>
+                <a href="./html/login.html" class="login prim txt btn">register</a>
                 <span>
                 <a class="nav-item" href="/">home</a>
                 <a class="nav-item" href="./html/speakers.html">speakers</a>
@@ -120,18 +119,73 @@
         <!--    HOME PAGE CONTENT START FROM -MAIN-     -->
     <main>
 
+        <section class="speakers-sec">
+            <h2 class="sec-title">speakers</h2>
+            <div class="cards-container">
+                <div class="speaker-card">
+                    <img class="speaker-img" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="speaker profile photo"/>
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">speaker name</h3>
+                        <h4 class="speaker-position">speaker position</h4>
+                    </div>
+                </div>
+                <div class="speaker-card">
+                    <img class="speaker-img" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="speaker profile photo">
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">speaker name</h3>
+                        <h4 class="speaker-position">speaker position</h4>
+                    </div>
+                </div>
+                <div class="speaker-card">
+                    <img class="speaker-img" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="speaker profile photo">
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">speaker name</h3>
+                        <h4 class="speaker-position">speaker position</h4>
+                    </div>
+                </div>
+                <div class="speaker-card">
+                    <img class="speaker-img" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="speaker profile photo">
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">speaker name</h3>
+                        <h4 class="speaker-position">speaker position</h4>
+                    </div>
+                </div>
+                <div class="speaker-card">
+                    <img class="speaker-img" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="speaker profile photo">
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">speaker name</h3>
+                        <h4 class="speaker-position">speaker position</h4>
+                    </div>
+                </div>
+                <div class="speaker-card">
+                    <img class="speaker-img" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="speaker profile photo">
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">speaker name</h3>
+                        <h4 class="speaker-position">speaker position</h4>
+                    </div>
+                </div>
+                <div class="speaker-card">
+                    <img class="speaker-img" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="speaker profile photo">
+                    <div class="speaker-info">
+                        <h3 class="speaker-name">speaker name</h3>
+                        <h4 class="speaker-position">speaker position</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!--     FOOTER      -->
+    <footer>
+        <div>
+            <a href="mailto:info@itlive.iq" target="_blank">info@itlive.iq</a>
+            <a href="https://fb.com/itliveforum" target="_blank">facebook</a>
+            <a href="https://instagram.com/itlive.iq" target="_blank">instagram</a>
+        </div>
+        <div>developed by <a href="" target="_blank">muhammed mahdi</a></div>
+    </footer>
 
-    <script type="text/javascript">
-        var counter = 1;
-        setInterval(function(){
-        document.getElementById('radio' + counter).checked = true;
-        counter++;
-        if(counter > 3){
-            counter = 1;
-        }
-        }, 8000);
-    </script>
+    <script type="text/javascript" src="./js/script.js"></script>
+
 </body>
 </html>
