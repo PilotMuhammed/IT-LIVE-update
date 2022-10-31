@@ -5,66 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IT.LIVE</title>
-
+    <link rel="icon" href="./image/logo.jpg">
     <link rel="stylesheet" href="./css/framework.css">
     <link rel="stylesheet" href="./css/master.css">
-
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <script src="./components/header.js"></script> 
+    <script src="./components/footer.js"></script>
     
 </head>
 <body>
-    <!--    START NAV   -->
-    <nav>
-        <a href="/" class="nav-logo">
-            it.live
-        </a>
-
-        <div class="nav-items">
-            <a class="nav-item" href="/">home</a>
-                <a class="nav-item" href="./html/speakers.html">speakers</a>
-                <a class="nav-item" href="./html/about.html">about</a>
-        </div>
-
-        <div class="nav-btns">
-            <a href="./html/login.html" class="login prim txt btn">register</a>
-            <label class="lang click btn" for="langClick">
-                <input type="checkbox" id="langClick"/>
-                <img src="./icon/world.svg" alt="world_icon" />
-                    <!-- LANG LIST -->
-                <ul class="lang-list">
-                    <li><a href="">عربي</a></li>
-                    <li><a href="">كوردي</a></li>
-                    <li><a href="">english</a></li>
-                </ul>
-            </label>
-        </div>
-
-        <!--    MOBILE NAV    -->
-        <label class="mobil-nav">
-            <input type="checkbox" class="mobile-nav-click"/>
-            <div class="toggle">
-                <span class="top_line common"></span>
-                <span class="bottom_line common"></span>
-            </div>
-        
-            <div class="mobil-nav-slide">
-                <a href="./html/login.html" class="login prim txt btn">register</a>
-                <span>
-                <a class="nav-item" href="/">home</a>
-                <a class="nav-item" href="./html/speakers.html">speakers</a>
-                <a class="nav-item" href="./html/about.html">about</a>
-                </span>
-                <hr>
-                <ul class="mobil-lang-list">
-                    <li><a href="">english</a></li>
-                    <li><a href="">كوردي</a></li>
-                    <li><a href="">عربي</a></li>
-                </ul>
-
-                <p class="copyrights">&copy; it.live 2023</p>
-            </div>
-        </label>
-    </nav>
-    <!--    END NAV     -->
+    <!--     Navigation   -->
+    <header-component></header-component>
 
     <!--    START CAROUSEL SLIDER   -->
     <header class="slider">
@@ -92,7 +44,7 @@
         <!--slide images start-->
         <div class="slides">
             <div class="slide first">
-                <!-- هنا ممكن تخلي prg first  -->
+                <!-- هنا ممكن نخلي prg first  -->
                 <!-- <img src="./image/1.jpg" alt="audience"> -->
             </div>
             <div class="slide second">
@@ -118,7 +70,61 @@
 
         <!--    HOME PAGE CONTENT START FROM -MAIN-     -->
     <main>
+        <!-- Start Section Numbers -->
+        <section class="numbers-sec">
+            <div class="container-numbers progress">
+                <div class="content-numbers" data-progress="80">
+                    <div class="text">
+                        <h2>0</h2>
+                        <p>VISITOR</p>
+                    </div>
+                </div>
+                <div class="content-numbers" data-progress="40">
+                    <div class="text">
+                        <h2>0</h2>
+                        <p>VOLUNTEER</p>
+                    </div>
+                </div>
+                <div class="content-numbers" data-progress="20">
+                    <div class="text">
+                        <h2>0</h2>
+                        <p>SPEAKER</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Section Numbers -->
 
+        <!-- Start Section Sponsors -->
+        <section class="sponsors-sec">
+            <h2>SPONSORS</h2>
+            <marquee  scrollamount="10" behavior="scroll" direction="" >
+                <img src="./image/Logo/station-logo.png" alt="">
+                <img src="./image/Logo/Ahly Iraqi-logo.jpg" alt="">
+                <img src="./image/Logo/Al-nabaa-logo.png" alt="">
+                <img src="./image/Logo/careem-logo.png" alt="">
+                <img src="./image/Logo/Coca-Cola-Logo.png" alt="">
+                <img src="./image/Logo/Eng-logo.jpg" alt="">
+                <img src="./image/Logo/Logo_-Asiacell.png" alt="">
+                <img src="./image/Logo/mustashar-logo.png" alt="">
+                <img src="./image/Logo/neo-logo.png" alt="">
+                <img src="./image/Logo/Rashed-logo.png" alt="">
+            </marquee>
+        </section>
+        <!-- End Section Sponsors -->
+
+        <!-- Start Event Date Section -->
+        <section class="eventDate-sec">
+            <h2>EVENT DATE</h2>
+             <div class="container">
+                <h3>23-24 March</h3>
+                <p>09 am - 05 pm</p>
+                <button>Register</button>
+             </div>
+        </section>
+        <!-- End Event Date Section -->
+
+        <!-- Start Section Speakers -->
         <section class="speakers-sec">
             <h2 class="sec-title">speakers</h2>
             <div class="cards-container">
@@ -173,17 +179,13 @@
                 </div>
             </div>
         </section>
+        <!-- End Section Speakers -->
+
     </main>
 
     <!--     FOOTER      -->
-    <footer>
-        <div>
-            <a href="mailto:info@itlive.iq" target="_blank">info@itlive.iq</a>
-            <a href="https://fb.com/itliveforum" target="_blank">facebook</a>
-            <a href="https://instagram.com/itlive.iq" target="_blank">instagram</a>
-        </div>
-        <div>developed by <a href="" target="_blank">muhammed mahdi</a></div>
-    </footer>
+    <footer-component></footer-component>
+
 
     <script type="text/javascript" src="./js/script.js"></script>
 
