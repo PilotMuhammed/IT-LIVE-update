@@ -1,4 +1,6 @@
-var counter = 1;
+//      CARSOL SLIDER AUTO MOVE
+
+let counter = 1;
         setInterval(function(){
         document.getElementById('radio' + counter).checked = true;
         counter++;
@@ -6,5 +8,3 @@ var counter = 1;
             counter = 1;
         }
         }, 8000);
-
-

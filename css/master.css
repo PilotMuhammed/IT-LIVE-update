@@ -30,10 +30,16 @@
 .prg>p{
     color: var(--White);
     text-transform: uppercase;
-    font-size: 3rem;
-    font-weight: 400;
+    font-size: 2.5rem;
+    font-weight: 300;
     /* text-align: justify; */
     /* width: 80%; */
+}
+@media (max-width:750px){
+    .prg>p{
+        font-size: 2rem;
+        font-weight: 250;
+    }
 }
 .gradient-bg{
     background: linear-gradient(60deg, rgba(0,0,0,0.9) 0%, rgba(224,0,0,0.7) 100%);
@@ -137,6 +143,11 @@
 }
     /*  END CAROUSEL SLIDER & HEADER    */
 
+/*  Style Class Public Title Section */
+.section-title {
+    margin-bottom: 30px;
+    color: var(--Gray);
+}
     /*   Numbers   */
 .numbers-sec{
     margin-bottom: 100px;
@@ -156,6 +167,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .content-numbers .text h2 {
     font-size: 40px;
@@ -164,6 +176,15 @@
     text-align: center;
     /* line-height: 35px; */
     color: var(--White);
+}
+.numbers-sec .line-bottom {
+    background-color:var(--Red);
+    height: 8px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border-bottom-left-radius: var(--Radius);
+    border-bottom-right-radius: var(--Radius);
 }
 @media (max-width:750px){
     .container-numbers .content-numbers {
@@ -178,10 +199,6 @@
 .sponsors-sec {
     margin-top: 100px;
     margin-bottom: 100px;
-}
-.sponsors-sec h2 {
-    margin-bottom: 30px;
-    color: var(--Gray);
 }
 .sponsors-sec img {
     height: 100px;
@@ -205,10 +222,6 @@
 .eventDate-sec {
     margin-top: 100px;
     margin-bottom: 100px;
-}
-.eventDate-sec h2 {
-    margin-bottom: 30px;
-    color: var(--Gray);
 }
 .eventDate-sec .container {
     text-align: center;
@@ -315,4 +328,34 @@
     color: var(--White);
     font-weight: 400;
     text-transform: uppercase;
+}
+/*     Style Page Register      */
+/* Section First */
+.section-first {
+    
+}
+.section-first .container {
+    text-align: center;
+    line-height: 50px;
+}
+.section-first .container h3 {
+    font-size: 50px;
+    color: var(--Red);
+}
+.section-first .container p {
+   font-size: 25px;
+   color: var(--Gray);
+}
+/* section Second */
+.section-second {
+
+}
+.section-second .container h4 {
+    margin-bottom: 15px;
+}
+.section-second .container p {
+    display: flex;
+}
+.section-second .container {
+    
 }
