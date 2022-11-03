@@ -11,7 +11,7 @@ class Footer extends HTMLElement {
           <a href="https://fb.com/itliveforum" target="_blank">facebook</a>
           <a href="https://instagram.com/itlive.iq" target="_blank">instagram</a>
       </div>
-      <div>developed by <a href="https://bio.link/pilot_m5" target="_blank">muhammed mahdi</a></div>
+      <div>Developed by <a id="l-b" href="https://bio.link/pilot_m5" target="_blank">Mohammed Mahdi</a></div>
       </footer>
       `;
     }

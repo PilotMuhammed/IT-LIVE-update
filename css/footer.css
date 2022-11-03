@@ -18,3 +18,8 @@ footer div a{
     color: var(--White);
     text-transform: capitalize;
 }
+#l-b:hover{
+    text-decoration:underline;
+    color: var(--Red);
+    font-weight: bold;
+}

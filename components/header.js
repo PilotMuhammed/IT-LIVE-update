@@ -11,8 +11,8 @@ class Header extends HTMLElement {
         </a>
 
         <div class="nav-items">
-            <a class="nav-item" href="/">home</a>
-                <a class="nav-item" href="./speakers.html">speakers</a>
+            <a class="nav-item" href="index.html">home</a>
+                <a class="nav-item" href="./news.html">News</a>
                 <a class="nav-item" href="./about.html">about</a>
         </div>
 
@@ -42,7 +42,7 @@ class Header extends HTMLElement {
                 <a href="./register.html" class="login prim txt btn">register</a>
                 <span>
                 <a class="nav-item" href="/">home</a>
-                <a class="nav-item" href="./speakers.html">speakers</a>
+                <a class="nav-item" href="./news.html">News</a>
                 <a class="nav-item" href="./about.html">about</a>
                 </span>
                 <hr>
