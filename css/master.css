@@ -148,6 +148,7 @@
     margin-bottom: 30px;
     color: var(--Gray);
     cursor: pointer;
+    text-transform: uppercase;
 }
 .section-title:hover {
     color: var(--Red);
@@ -274,26 +275,51 @@
     margin-bottom: 100px;
 }
 .speakers-sec .container {
+    height: 200;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    max-height: 120;
-    overflow-x: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 .speakers-sec .container::-webkit-scrollbar{
-    width: 0px;
+    display: none;
 }
-.speakers-sec .card {
-    min-width: 110px;
+.speaker-card {
+    width: 200px;
     height: 200px;
-    margin-left: 50px;
-    margin-right: 50px;
-}
-.speakers-sec .container img {
-    width: 190px;
-    height: 180px;
+    margin: 0 15px;
+    /* overflow: hidden;  اذا تخلي هذا الصور كلها تنجعص */
+    background-color: aquamarine;
     border-radius: var(--Radius);
+    position: relative;
 }
-
+.speaker-card>img {
+    width: auto;
+    height: 200px;
+}
+.speaker-info{
+    color: var(--White);
+    background: linear-gradient(0deg, rgba(0, 0, 0,.5) 20%, rgba(224,0,0,0) 100%);
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: -100%;
+    right: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 10px;
+    transition: all .3s ease-out;
+}
+.speaker-name , .speakr-position{
+    text-transform: capitalize;
+    font-weight: 400;
+    overflow: hidden;
+}
+.speaker-card:hover .speaker-info{
+    bottom: 0%;
+}
 
 /* ----  SPONSORS ----  */
 .sponsors-sec {
