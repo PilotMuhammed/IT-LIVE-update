@@ -12,11 +12,13 @@
     <link rel="stylesheet" href="./css/footer.css">
     <script defer src="./components/header.js"></script> 
     <script defer src="./components/footer.js"></script>
-    
+
 </head>
 <body>
     <!--     Navigation   -->
     <header-component></header-component>
+
+
 
     <!--    START CAROUSEL SLIDER   -->
     <header class="slider">
@@ -26,12 +28,30 @@
         <input type="radio" name="radio-btn" id="radio3">
         <!--radio buttons end-->
         
+        <!--slide images start-->
+        <div class="slides">
+            <div class="slide first">
+                <img src="./image/1.jpg" alt="audience">
+            </div>
+            <div class="slide second">
+                <img src="./image/2.jpg" alt="musican on stage with sponsors on big screen">
+            </div>
+            <div class="slide third">
+                <img src="./image/3.jpg" alt="volunteer watching">
+            </div>
+        </div>
+        <!--slide images end-->
+
+        <div class="gradient-bg"></div>
+
+        <!--slide paragraphes start-->
         <div class="statements">
             <div class="prg first">
                 <p>the biggest it gathering in iraq since 2017</p>
             </div>
             <div class="prg">
-                <p>keeping pace with and transferring the latest technologies around the world in the field of programming, networks, artificial intelligence, data security and digital transformation</p>
+                <p>keeping pace with and transferring the latest technologies around the world in the field of programming,
+                    networks, artificial intelligence, data security and digital transformation</p>
             </div>
             <div class="prg">
                 <p>with the participation of local and international companies and influential personalities</p>
@@ -39,24 +59,6 @@
         </div>
         <!--slide paragraphes end-->
 
-        <div class="gradient-bg"></div>
-
-        <!--slide images start-->
-        <div class="slides">
-            <div class="slide first">
-                <!-- هنا ممكن نخلي prg first  -->
-                <!-- <img src="./image/1.jpg" alt="audience"> -->
-            </div>
-            <div class="slide second">
-                <!-- كذلك -->
-                <!-- <img src="./image/2.jpg" alt="musican on stage with sponsors on big screen"> -->
-            </div>
-            <div class="slide third">
-                <!-- كذلك  -->
-                <!-- <img src="./image/3.jpg" alt="volunteer watching"> -->
-            </div>
-        </div>
-        <!--slide images end-->
 
         <!--manual navigation start-->
         <div class="navigation-manual">
@@ -68,33 +70,32 @@
     </header>
         <!--image slider end-->
 
+        
         <!--    HOME PAGE CONTENT START FROM -MAIN-     -->
     <main>
         <!-- Start Section Numbers -->
         <section class="numbers-sec">
-            <div class="container-numbers">
                 <div class="content-numbers">
-                    <div class="text">
-                        <h2>0</h2>
-                        <p>VISITOR</p>
-                    </div>
                     <div class="line-bottom"></div>
+                    <div class="text">
+                        <h2 class="count" data-goal="1500">0</h2>
+                        <p onclick="coloring()">VISITOR</p>
+                    </div>
                 </div>
                 <div class="content-numbers">
+                    <div class="line-bottom"></div>
                     <div class="text">
-                        <h2>0</h2>
+                        <h2 class="count" data-goal="120">0</h2>
                         <p>VOLUNTEER</p>
                     </div>
-                    <div class="line-bottom"></div>
                 </div>
                 <div class="content-numbers">
+                    <div class="line-bottom"></div>
                     <div class="text">
-                        <h2>0</h2>
+                        <h2 class="count" data-goal="15">0</h2>
                         <p>SPEAKER</p>
                     </div>
-                    <div class="line-bottom"></div>
                 </div>
-            </div>
         </section>
         <!-- End Section Numbers -->
 
@@ -104,24 +105,34 @@
              <div class="container">
                 <h3>23-24 March</h3>
                 <p>09 am - 05 pm</p>
-                <a href="./register.html"><button>Register</button></a>
+                <a href="./register.html" class="prim txt2X btn">register</a>
              </div>
         </section>
         <!-- End Event Date Section -->
 
         <!-- Start News Section -->
+        <!-- <video controls loop autoplay muted class="show-video" src="./video/video-1.mp4"></video> -->
         <section class="news-sec">
-            <h2 class="section-title">news</h2>
+            <h2 class="section-title"><a title="go to news page" href="">news</a></h2>
             <div class="container">
-                <video controls loop autoplay muted class="show-video" src="./video/video-1.mp4"></video>
+                <main class="scroll-Y">
+                    <article class="news-card"></article>
+                    <article class="news-card"></article>
+                    <article class="news-card"></article>
+                    <article class="news-card"></article>
+                    <article class="news-card"></article>
+                </main>
+                <aside>
+                    <article class="news-card"></article>
+                </aside>
             </div>
         </section>
         <!-- End News Section -->
 
         <!-- Start Section Speakers -->
         <section class="speakers-sec">
-            <h2 class="section-title">speakers</h2>
-            <div class="container">
+            <h2 class="section-title"><a href="">speakers</a></h2>
+            <div class="container scroll-inline">
                 <div class="speaker-card"><img src="./image/person.jpg" alt="">
                     <div class="speaker-info">
                         <h3 class="speaker-name">speaker name</h3>
@@ -188,19 +199,32 @@
 
         <!-- Start Section Sponsors -->
         <section class="sponsors-sec">
-            <h2 class="section-title">sponsors</h2>
-            <marquee  scrollamount="10" behavior="scroll" direction="" >
-                <img src="./image/Logo/station-logo.png" alt="">
-                <img src="./image/Logo/Ahly Iraqi-logo.jpg" alt="">
-                <img src="./image/Logo/Al-nabaa-logo.png" alt="">
-                <img src="./image/Logo/careem-logo.png" alt="">
-                <img src="./image/Logo/Coca-Cola-Logo.png" alt="">
-                <img src="./image/Logo/Eng-logo.jpg" alt="">
-                <img src="./image/Logo/Logo_-Asiacell.png" alt="">
-                <img src="./image/Logo/mustashar-logo.png" alt="">
-                <img src="./image/Logo/neo-logo.png" alt="">
-                <img src="./image/Logo/Rashed-logo.png" alt="">
-            </marquee>
+            <h2 class="section-title"><a href="">sponsors</a></h2>
+            <div class="container">
+                <div class="slider-track">
+                    <div class="comp-logo"><img src="./image/Logo/station-logo.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/Ahly Iraqi-logo.jpg" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/Al-nabaa-logo.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/careem-logo.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/Coca-Cola-Logo.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/Eng-logo.jpg" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/Logo_-Asiacell.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/mustashar-logo.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/neo-logo.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/Rashed-logo.png" alt=""></div>
+                    
+                    <div class="comp-logo"><img src="./image/Logo/station-logo.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/Ahly Iraqi-logo.jpg" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/Al-nabaa-logo.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/careem-logo.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/Coca-Cola-Logo.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/Eng-logo.jpg" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/Logo_-Asiacell.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/mustashar-logo.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/neo-logo.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/Rashed-logo.png" alt=""></div>
+                </div>
+            </div>
         </section>
         <!-- End Section Sponsors -->
 

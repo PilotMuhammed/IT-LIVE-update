@@ -1,92 +1,126 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
-:root{
-    --Red : #E00000;
+:root {
+    --Red: #E00000;
     --White: #fff;
     --Gray: #606060;
-    --LightGray : #ccc;
+    --LightGray: #ccc;
     --NavShadow: rgb(0, 0, 0, .1) 0px 3px 5px;
-    --Mrg15 : 15px;
-    --LinearGradient: linear-gradient(60deg, rgb(0, 0, 0) 0%, rgba(224,0,0) 100%);
-    --Radius:4px;
+    --Mrg15: 15px;
+    --LinearGradient: linear-gradient(60deg, rgb(0, 0, 0) 0%, rgba(224, 0, 0) 100%);
+    --Radius: 4px;
 }
 
-html{
+html {
     scroll-behavior: smooth;
     font-size: 16px;
 }
 
-*{
+* {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
 }
 
-a{
+a {
     text-decoration: none;
+    color: inherit;
 }
 
-body{
+body {
     transition: 0.3s ease-out;
     font-family: 'Inter', sans-serif;
     background-color: var(--White);
 }
-main{
-    padding: 100px 50px;
-}   
-.btn{
-    margin: 0 var(--Mrg15);
-    cursor: pointer;
+
+main {
+    padding: 0px;
 }
-.txt{
+
+section {
+    padding: 100px 50px;
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.txt {
     font-size: 16px;
     padding: 5px;
+    text-transform: uppercase;
+    margin: 0 15px;
 }
-.prim{
+
+.txt2X {
+    font-size: 24px;
+    padding: 10px;
+    text-transform: uppercase;
+    margin: 25px;
+}
+
+.prim {
     background-color: var(--Red);
     color: var(--White);
 }
-.secnd{
+
+.secnd {
     color: var(--Red);
     border: var(--Red) 3px solid;
 }
-.click{
+
+.click {
     height: 30px;
     width: 30px;
 }
-::selection{
+
+::selection {
     background-color: var(--Red);
     color: var(--White);
 }
-    /* TABLET */
-@media (max-width:750px){
-    :root{
-        --Mrg15 : 7px;
+
+/* TABLET */
+@media (max-width:750px) {
+    :root {
+        --Mrg15: 7px;
     }
 }
-    /* PHONE */
-@media (max-width:499px){
-    html{
+
+/* PHONE */
+@media (max-width:499px) {
+    html {
         font-size: 12px;
     }
 }
 
-/* Scrool */
-
-/* width */
+/*     SCROLL STYLE    */
+.scroll-inline {
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 1rem;
+}
+.scroll-inline>* {
+    scroll-snap-align: start;
+}
+.scroll-Y {
+    scroll-snap-type: mandatory;
+}
+.scroll-Y>* {
+    scroll-snap-align: start;
+}
+/* Scroll width */
 ::-webkit-scrollbar {
-    width: 11px;
-    height: 8px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    /* background-color:var(--Gray); */
+    height: 10px;
+    width: 10px;
 }
 
-/* Handle */
+/* Scroll Track */
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+/* Scroll Handle */
 ::-webkit-scrollbar-thumb {
-    background-image: linear-gradient(var(--Red),var(--Gray));
-    /* border: var(--LightGray) 2px solid; */
-    border-radius: 5px;
-  }
+    background: var(--LightGray);
+    /* border-radius: 5px; */
+}
