@@ -37,7 +37,6 @@ function startCount(i){
 }
 
 
-
 function coloring(){
   this.style.add('background-color','yellow');
 }
