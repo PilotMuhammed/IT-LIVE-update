@@ -1,0 +1,23 @@
+{
+  "name": "it-live-update",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PilotM5/IT-LIVE-update.git"
+  },
+  "author": "pilot mohammed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PilotM5/IT-LIVE-update/issues"
+  },
+  "homepage": "https://github.com/PilotM5/IT-LIVE-update#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.0.3"
+  }
+}
