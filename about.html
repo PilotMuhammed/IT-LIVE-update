@@ -5,57 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-    <link rel="icon" href="./image/logo.jpg">
+    <link rel="icon" type="image/jpg" sizes="32x32" href="./image/logo.jpg">
     <link rel="stylesheet" href="./css/framework.css">
-    <link rel="stylesheet" href="./css/master.css">
+    <link rel="stylesheet" href="./css/about.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
-    <script src="./components/header.js"></script> 
-    <script src="./components/footer.js"></script>
-    
+    <script defer src="./components/header.js"></script>
+    <script defer src="./components/footer.js"></script>
+
 </head>
 <body>
     <!--     Navigation   -->
     <header-component></header-component>
 
     <main>
-        <section class="sec-first-about">
-            <div class="text">
-                <h2>IT.LIVE</h2>
-                <pre>
-The biggest IT Gathering in Iraq since 2017,
-Keeping pace with and transferring the latest technologies around the world 
-in the field of programming, networks, artificial intelligence, data security 
-and digital transformation,
-With the participation of local and international companies and influential
-personalities
-                </pre>
-            </div>
+        <section class="about-sec">
+            <h2 class="website-logo"><span>IT.</span>LIVE</h2>
+            <p class="website-description">The biggest IT Gathering in Iraq since 2017,
+            Keeping pace with and transferring the latest technologies around the world 
+            in the field of programming, networks, artificial intelligence, data security 
+            and digital transformation,
+            With the participation of local and international companies and influential
+            personalities</p>
         </section>
 
-                <!-- Start Section Sponsors -->
-                <section class="sponsors-sec">
-                    <h2 class="section-title">SPONSORS</h2>
-                    <marquee  scrollamount="10" behavior="scroll" direction="" >
-                        <img src="./image/Logo/station-logo.png" alt="">
-                        <img src="./image/Logo/Ahly Iraqi-logo.jpg" alt="">
-                        <img src="./image/Logo/Al-nabaa-logo.png" alt="">
-                        <img src="./image/Logo/careem-logo.png" alt="">
-                        <img src="./image/Logo/Coca-Cola-Logo.png" alt="">
-                        <img src="./image/Logo/Eng-logo.jpg" alt="">
-                        <img src="./image/Logo/Logo_-Asiacell.png" alt="">
-                        <img src="./image/Logo/mustashar-logo.png" alt="">
-                        <img src="./image/Logo/neo-logo.png" alt="">
-                        <img src="./image/Logo/Rashed-logo.png" alt="">
-                    </marquee>
-                </section>
-                <!-- End Section Sponsors -->
+        <!-- Start Section Sponsors -->
+        <section class="sponsors-sec">
+            <h2 class="section-title"><a href="">sponsors</a></h2>
+            <div class="container">
+                <div class="slider-track">
+                    <div class="comp-logo"><img src="./image/Logo/station-logo.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/Ahly Iraqi-logo.jpg" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/Al-nabaa-logo.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/careem-logo.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/Coca-Cola-Logo.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/Eng-logo.jpg" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/Logo_-Asiacell.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/mustashar-logo.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/neo-logo.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/Rashed-logo.png" alt=""></div>
+
+                    <div class="comp-logo"><img src="./image/Logo/station-logo.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/Ahly Iraqi-logo.jpg" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/Al-nabaa-logo.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/careem-logo.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/Coca-Cola-Logo.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/Eng-logo.jpg" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/Logo_-Asiacell.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/mustashar-logo.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/neo-logo.png" alt=""></div>
+                    <div class="comp-logo"><img src="./image/Logo/Rashed-logo.png" alt=""></div>
+                </div>
+            </div>
+        </section>
+        <!-- End Section Sponsors -->
     </main>
 
 
     <!--     FOOTER      -->
     <footer-component></footer-component>
 
-    <script type="text/javascript" src="./js/script.js"></script>
+    <script type="text/javascript" src="./js/script.js" defer></script>
+    <script type="text/javascript" src="./js/navigationBar.js" defer></script>
 </body>
 </html>

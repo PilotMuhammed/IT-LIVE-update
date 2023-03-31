@@ -5,57 +5,38 @@ class Header extends HTMLElement {
 
     connectedCallback() {
       this.innerHTML = `
-      <nav>
-        <a href="/" class="nav-logo">
-            it.live
-        </a>
+      <header>
+        <h1 class="website-logo">
+            <a href="/">it.live</a>
+        </h1>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Menu">
+            <span class="visually-hidden">Menu</span>
+            <div class="hamburger" aria-hidden="true"></div>
+        </button>
+        <nav class="primary-menu" id="primary-navigation" data-state="closed">
+            <ul class="primary-navigation">
+                <li class="menu-item"><a href="/">home</a></li>
+                <li class="menu-item"><a href="./news.html">news</a></li>
+                <li class="menu-item"><a href="./about.html">about</a></li>
+            </ul>
 
-        <div class="nav-items">
-            <a class="nav-item" href="index.html">home</a>
-                <a class="nav-item" href="./news.html">News</a>
-                <a class="nav-item" href="./about.html">about</a>
-        </div>
-
-        <div class="nav-btns">
             <a href="./register.html" class="login prim txt btn">register</a>
-            <label class="lang click btn" for="langClick">
-                <input type="checkbox" id="langClick"/>
-                <img src="./icon/world.svg" alt="world_icon" />
-                    <!-- LANG LIST -->
-                <ul class="lang-list">
-                    <li><a href="#">عربي</a></li>
-                    <li><a href="#">كوردي</a></li>
-                    <li><a href="#">english</a></li>
-                </ul>
-            </label>
-        </div>
 
-        <!--    MOBILE NAV    -->
-        <label class="mobil-nav">
-            <input type="checkbox" class="mobile-nav-click"/>
-            <div class="toggle">
-                <span class="top_line common"></span>
-                <span class="bottom_line common"></span>
-            </div>
-        
-            <div class="mobil-nav-slide">
-                <a href="./register.html" class="login prim txt btn">register</a>
-                <span>
-                <a class="nav-item" href="/">home</a>
-                <a class="nav-item" href="./news.html">News</a>
-                <a class="nav-item" href="./about.html">about</a>
-                </span>
-                <hr>
-                <ul class="mobil-lang-list">
-                    <li><a href="#">english</a></li>
-                    <li><a href="#">كوردي</a></li>
-                    <li><a href="#">عربي</a></li>
+            <div class="website-languages">
+                <button class="languages-toggle" aria-expanded="false" aria-controls="languages-list" aria-label="Languages">
+                    <span class="visually-hidden">Languages</span>
+                    <img src="./icon/world.svg" alt="world icon" />
+                </button>
+                <ul class="languages-list" id="languages-list" data-state="closed">
+                    <li><a href="">عربي</a></li>
+                    <li><a href="">كوردي</a></li>
+                    <li><a href="">english</a></li>
                 </ul>
-
-                <p class="copyrights">&copy; it.live 2023</p>
             </div>
-        </label>
-    </nav>
+
+            <p class="copyrights">&copy; it.live ${new Date().getFullYear()}</p>
+        </nav> 
+    </header>
       `;
     }
   }

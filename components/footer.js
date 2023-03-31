@@ -1,20 +1,21 @@
 class Footer extends HTMLElement {
-    constructor() {
-      super();
-    }
-  
-    connectedCallback() {
-      this.innerHTML = `
-      <footer>
-      <div>
-          <a href="mailto:info@itlive.iq" target="_blank">info@itlive.iq</a>
-          <a href="https://fb.com/itliveforum" target="_blank">facebook</a>
-          <a href="https://instagram.com/itlive.iq" target="_blank">instagram</a>
-      </div>
-      <div>Developed by <a id="l-b" href="https://bio.link/pilot_m5" target="_blank">Mohammed Mahdi</a></div>
-      </footer>
-      `;
-    }
+  constructor() {
+    super();
   }
-  
-  customElements.define('footer-component', Footer);
+
+  connectedCallback() {
+    this.innerHTML = `
+    <footer>
+      <h2 class="visually-hidden">Social Accounts</h2>
+      <ul class="social-accounts">
+          <li><a href="mailto:info@itlive.iq" target="_blank"><img src="./icon/email.svg" alt="Email"></a></li>
+          <li><a href="https://fb.com/itliveforum" target="_blank"><img src="./icon/facebook.svg" alt="Facebook"></a></li>
+          <li><a href="https://instagram.com/itlive.iq" target="_blank"><img src="./icon/instagram.svg" alt="Instagram"></a></li>
+      </ul>
+      <p> &copy; IT.LIVE ${new Date().getFullYear()}</p>
+      <p>Developed by <a href="https://bio.link/pilot_m5" target="_blank">Mohammed Mahdi</a></p>
+    </footer>`;
+  }
+}
+
+customElements.define("footer-component", Footer);

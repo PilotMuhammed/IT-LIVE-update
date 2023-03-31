@@ -2,9 +2,10 @@
 
 :root {
     --Red: #E00000;
-    --White: #fff;
+    --White: hsl(0, 0%, 100%);
     --Gray: #606060;
     --LightGray: #ccc;
+    --DarkGray: #222;
     --NavShadow: rgb(0, 0, 0, .1) 0px 3px 5px;
     --Mrg15: 15px;
     --LinearGradient: linear-gradient(60deg, rgb(0, 0, 0) 0%, rgba(224, 0, 0) 100%);
@@ -31,6 +32,7 @@ body {
     transition: 0.3s ease-out;
     font-family: 'Inter', sans-serif;
     background-color: var(--White);
+    min-height: 100vh;
 }
 
 main {
@@ -50,7 +52,7 @@ section {
     font-size: 16px;
     padding: 5px;
     text-transform: uppercase;
-    margin: 0 15px;
+    /* margin: 0 15px; */
 }
 
 .txt2X {
@@ -73,6 +75,29 @@ section {
 .click {
     height: 30px;
     width: 30px;
+}
+.website-logo{
+    color: var(--Red);
+    font-size: 24px;
+}
+/*  Style Class Public Title Section */
+.section-title {
+    margin-bottom: 30px;
+    color: var(--Gray);
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.section-title:hover {
+    color: var(--Red);
+}
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }
 
 ::selection {

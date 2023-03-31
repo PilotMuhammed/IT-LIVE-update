@@ -1,0 +1,60 @@
+h2.website-logo{
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+.website-logo span{
+    border: 3px var(--Gray) solid;
+    margin: 5px;
+}
+.website-description{
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+/* ----  SPONSORS ----  */
+
+.sponsors-sec .container {
+    width: 100%;
+    overflow: hidden;
+}
+.sponsors-sec .slider-track {
+    height: 100px;
+    width: 2380px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    animation: scroll 20s linear infinite;
+}
+.sponsors-sec .slider-track:hover {
+    animation-play-state: paused;
+}
+.sponsors-sec .slider-track::-webkit-scrollbar {
+    display: none;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-1100px);
+    }
+}
+.sponsors-sec .comp-logo {
+    height: 100px;
+    width: 100px;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+}
+.sponsors-sec .comp-logo img {
+    height: auto;
+    max-width: 100%;
+    filter: grayscale(1);
+}
+.sponsors-sec .comp-logo:hover img {
+    filter: grayscale(0);
+}

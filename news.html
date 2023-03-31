@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News</title>
-    <link rel="icon" href="./image/logo.jpg">
+    <title>About</title>
+    <link rel="icon" type="image/jpg" sizes="32x32" href="./image/logo.jpg">
     <link rel="stylesheet" href="./css/framework.css">
-    <link rel="stylesheet" href="./css/master.css">
+    <link rel="stylesheet" href="./css/news.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
-    <script defer src="./components/header.js"></script> 
+    <script defer src="./components/header.js"></script>
     <script defer src="./components/footer.js"></script>
 
 </head>
@@ -19,31 +19,31 @@
     <header-component></header-component>
 
     <main>
-        <section class="sec-first-news">
-            <div class="line-one">
-                <marquee scrollamount="10" behavior="" direction="right">
-                    <img class="img-movie" src="./image/1.jpg" alt="">
-                    <img class="img-movie" src="./image/2.jpg" alt="">
-                    <img class="img-movie" src="./image/3.jpg" alt="">
-                    <img class="img-movie" src="./image/4.jpg" alt="">
-                    <img class="img-movie" src="./image/5.jpg" alt="">
-                </marquee>
-            </div>
-            <div class="second-two">
-                <marquee id="mar" scrollamount="10" behavior="" direction="left">
-                    <img class="img-movie" src="./image/1.jpg" alt="">
-                    <img class="img-movie" src="./image/2.jpg" alt="">
-                    <img class="img-movie" src="./image/3.jpg" alt="">
-                    <img class="img-movie" src="./image/4.jpg" alt="">
-                    <img class="img-movie" src="./image/5.jpg" alt="">
-                </marquee>
+        <!-- Start News Section -->
+        <!-- <video controls loop autoplay muted class="show-video" src="./video/video-1.mp4"></video> -->
+        <section class="news-sec">
+            <h2 class="section-title"><a title="go to news page" href="">news</a></h2>
+            <div class="container">
+                <main class="scroll-Y">
+                    <article class="news-card"></article>
+                    <article class="news-card"></article>
+                    <article class="news-card"></article>
+                    <article class="news-card"></article>
+                    <article class="news-card"></article>
+                </main>
+                <aside>
+                    <article class="news-card"></article>
+                </aside>
             </div>
         </section>
+        <!-- End News Section -->
     </main>
 
 
     <!--     FOOTER      -->
     <footer-component></footer-component>
-    
+
+    <script type="text/javascript" src="./js/script.js" defer></script>
+    <script type="text/javascript" src="./js/navigationBar.js" defer></script>
 </body>
 </html>
