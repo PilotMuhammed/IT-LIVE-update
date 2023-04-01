@@ -1,130 +1,94 @@
-const mongoose = require("mongoose");
+const express = require("express");
+const MongoClient = require("mongodb").MongoClient;
+const bodyParser = require("body-parser");
+const app = express();
 
-// Define schemas for each table
-const volunteerSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  phone: String,
-  work: String,
+// Connection URL and database name
+const url = "mongodb+srv://pilot:tIiRozJfYqT6iZPc@cluster0.gjfxw1c.mongodb.net/IT-LIVE?retryWrites=true&w=majority";
+const dbName = "IT-LIVE";
+
+// Use middleware to parse JSON and URL-encoded form data
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// Serve the HTML file
+app.get("/", function (req, res) {
+  res.sendFile(__dirname + "/register.html");
 });
 
-const visitorSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  phone: String,
-  college: String,
+// Handle form submissions
+app.post("/submit", function (req, res) {
+  // Get the data from the form
+  const section = req.body.section;
+  const name = req.body.name;
+  const email = req.body.email;
+  const phone = req.body.phone;
+  const college = req.body.college;
+  const subject = req.body.subject;
+  const about = req.body.about;
+  const photo = req.body.photo;
+
+  // Connect to the MongoDB server and insert the data into the appropriate collection
+  MongoClient.connect(url, function (err, client) {
+    if (err) throw err;
+    const db = client.db(dbName);
+
+    // Insert the data into the appropriate collection based on the section of the form
+    if (section === "volunteers") {
+      const collection = db.collection("volunteers");
+      collection.insertOne(
+        {
+          name: name,
+          email: email,
+          phone: phone,
+          work: req.body.work,
+        },
+        function (err, result) {
+          if (err) throw err;
+          console.log("Inserted document into the volunteers collection");
+          client.close();
+          res.redirect("/");
+        }
+      );
+    } else if (section === "visitors") {
+      const collection = db.collection("visitors");
+      collection.insertOne(
+        {
+          name: name,
+          email: email,
+          phone: phone,
+          college: college,
+        },
+        function (err, result) {
+          if (err) throw err;
+          console.log("Inserted document into the visitors collection");
+          client.close();
+          res.redirect("/");
+        }
+      );
+    } else if (section === "speakers") {
+      const collection = db.collection("speakers");
+      collection.insertOne(
+        {
+          name: name,
+          email: email,
+          phone: phone,
+          subject: subject,
+          about: about,
+          photo: photo,
+        },
+        function (err, result) {
+          if (err) throw err;
+          console.log("Inserted document into the speakers collection");
+          client.close();
+          res.redirect("/");
+        }
+      );
+    }
+  });
 });
 
-const speakerSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  phone: String,
-  subject: String,
-  about: String,
-  photo: String,
+// Start the server
+app.listen(3000, function () {
+  console.log("Server started on port 3000");
 });
-
-const Volunteer = mongoose.model("Volunteer", volunteerSchema);
-const Visitor = mongoose.model("Visitor", visitorSchema);
-const Speaker = mongoose.model("Speaker", speakerSchema);
-
-// Connect to MongoDB
-mongoose.connect("mongodb+srv://pilot:tIiRozJfYqT6iZPc@cluster0.gjfxw1c.mongodb.net/IT-LIVE?retryWrites=true&w=majority", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-
-function openForm(evt, formName) {
-  var i, tabcontent, tablink;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].classList.remove("active");
-  }
-  tablink = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablink.length; i++) {
-    tablink[i].classList.remove("active");
-  }
-  document.getElementById(formName).classList.add("active");
-  evt.currentTarget.classList.add("active");
-}
-
-document.addEventListener("submit", function (event) {
-  event.preventDefault();
-  var formData = new FormData(event.target);
-  var data = {};
-  for (var [key, value] of formData.entries()) {
-    data[key] = value;
-  }
-  console.log(data);
-  event.target.reset();
-
-  // Save data to MongoDB based on which section was submitted
-  if (event.target.id === "volunteer-form") {
-    const volunteer = new Volunteer(data);
-    volunteer.save(function (err) {
-      if (err) {
-        console.log(err);
-      } else {
-        console.log("Volunteer saved successfully");
-      }
-    });
-  } else if (event.target.id === "visitor-form") {
-    const visitor = new Visitor(data);
-    visitor.save(function (err) {
-      if (err) {
-        console.log(err);
-      } else {
-        console.log("Visitor saved successfully");
-      }
-    });
-  } else if (event.target.id === "speaker-form") {
-    const speaker = new Speaker(data);
-    speaker.save(function (err) {
-      if (err) {
-        console.log(err);
-      } else {
-        console.log("Speaker saved successfully");
-      }
-    });
-  }
-});
-
-/* -----------------   collections    ---------------- */
-
-// Require the MongoDB driver
-// const MongoClient = require('mongodb').MongoClient;
-
-// // Connection URL and database name
-// const url = 'mongodb+srv://pilot:tIiRozJfYqT6iZPc@cluster0.gjfxw1c.mongodb.net/IT-LIVE?retryWrites=true&w=majority';
-// const dbName = 'IT-LIVE';
-
-// // Create a MongoClient instance
-// const client = new MongoClient(url);
-
-// // Connect to the MongoDB server
-// client.connect(function(err) {
-//   if (err) throw err;
-//   console.log('Connected successfully to server');
-
-//   // Get a reference to the database
-//   const db = client.db(dbName);
-
-//   // Create the collections for each section of the registration form
-//   db.createCollection('volunteers', function(err, res) {
-//     if (err) throw err;
-//     console.log('Volunteers collection created');
-//   });
-
-//   db.createCollection('visitors', function(err, res) {
-//     if (err) throw err;
-//     console.log('Visitors collection created');
-//   });
-
-//   db.createCollection('speakers', function(err, res) {
-//     if (err) throw err;
-//     console.log('Speakers collection created');
-//   });
-
-//   // Close the database connection
-//   client.close();
-// });
