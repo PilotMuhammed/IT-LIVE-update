@@ -25,7 +25,7 @@ class Header extends HTMLElement {
             <div class="website-languages">
                 <button class="languages-toggle" aria-expanded="false" aria-controls="languages-list" aria-label="Languages">
                     <span class="visually-hidden">Languages</span>
-                    <img src="./icon/world.svg" alt="world icon" />
+                    <img src="./assets/icons/world.svg" alt="world icon" />
                 </button>
                 <ul class="languages-list" id="languages-list" data-state="closed">
                     <li><a href="">عربي</a></li>
