@@ -25,13 +25,19 @@ window.onscroll = function () {
   }
 };
 
-function startCount(i) {
-  let goal = numberCount[i].dataset.goal;
-  let count = setInterval(() => {
-    numberCount[i].textContent++;
-    numberColor[i].classList.add("line-bottom-full");
-    if (numberCount[i].textContent == goal) {
-      clearInterval(count);
-    }
-  }, 3000 / goal);
+function startCount(i){
+    let goal = numberCount[i].dataset.goal;
+    let count = setInterval(()=>{
+        numberCount[i].textContent++;
+        numberColor[i].classList.add("line-bottom-full");
+        if (numberCount[i].textContent == goal) {
+            clearInterval(count);
+        }
+    }, 3000/goal)
+}
+
+
+
+function coloring(){
+  this.style.add('background-color','yellow');
 }
