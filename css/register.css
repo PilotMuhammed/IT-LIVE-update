@@ -1,0 +1,171 @@
+/* --- Section First Register --- */
+.sec-first-register {
+}
+
+.sec-first-register .container {
+  text-align: center;
+  /* line-height: 50px; */
+}
+
+.sec-first-register .container > * {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.sec-first-register .container h3 {
+  font-size: 50px;
+  color: var(--Red);
+  font-weight: 600;
+}
+
+.sec-first-register .container p {
+  font-size: 25px;
+  color: var(--Gray);
+}
+
+@media (max-width: 750px) {
+  .sec-first-register .container h3 {
+    font-size: 25px;
+  }
+
+  .sec-first-register .container p {
+    font-size: 12px;
+    color: var(--Gray);
+  }
+}
+
+/* --- Section Second Register --- */
+.sec-second-register {
+}
+
+.sec-second-register .container {
+}
+
+.sec-second-register .container h3 {
+  margin-top: 60px;
+  margin-bottom: 15px;
+  color: var(--Gray);
+}
+
+.sec-second-register .container p {
+  display: flex;
+  color: var(--Gray);
+}
+
+/* ---- Start Section Form ---- */
+.registration-form {
+  max-width: 600px;
+  margin: 6px auto;
+  padding: 20px;
+  background-color: #f1f1f1;
+  /* background-color: var(--LightGray); */
+  margin-bottom: 60px;
+  border-radius: 4px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tablink {
+  padding: 12px 24px;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tablink:hover {
+  /* background-color: #aaa; */
+  background-color: var(--Red);
+  color: var(--White);
+}
+
+.tablink.active {
+  /* background-color: #ccc; */
+  background-color: var(--Gray);
+  color: var(--White);
+}
+
+.tabcontent {
+  display: none;
+}
+
+.tabcontent.active {
+  display: block;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+select {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+button[type="submit"] {
+  background-color: var(--Red);
+  color: var(--White);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button[type="submit"]:hover {
+  /* background-color: var(--Gray); */
+  /* color: var(--Red); */
+}
+
+input[type="file"] {
+  padding: 8px;
+  align-self: center;
+}
+
+/* ---- End Section Form ---- */
+
+/* Style Page News */
+.sec-first-news {
+  /* height: 80vh; */
+}
+
+.sec-first-news .line-one {
+}
+
+.img-movie {
+  width: auto;
+  height: 150px;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: var(--Radius);
+}
+
+.sec-first-news .line-two {
+}
+
+#mar {
+  margin-top: 40px;
+}

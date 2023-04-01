@@ -35,9 +35,3 @@ function startCount(i){
         }
     }, 3000/goal)
 }
-
-
-
-function coloring(){
-  this.style.add('background-color','yellow');
-}
