@@ -17,34 +17,28 @@
 
 </head>
 <body>
-    <!--     Navigation   -->
-    <header-component></header-component>
-<main>
-    <!-- Start Section First -->
-    <section class="sec-first-register">
-        <div class="container">
-            <h3>13-14 October</h3>
-            <p>09 am - 05 pm</p>
-            <p>Registration Deadline - 10 October</p>
-        </div>
+  <!--     Navigation   -->
+  <header-component></header-component>
+  <main>
+    <!-- Start Event Date Section -->
+    <section class="eventDate-sec">
+      <h2>13-14 October</h2>
+      <p>09 am - 05 pm</p>
+      <p>Registration <span class="eventDate-deadline">Deadline - 1</span> October</p>
     </section>
-    <!-- End Section First -->
+    <!-- End Event Date Section -->
 
     <!-- Start Terms Section -->
-    <!-- <section class="sec-second-register">
-        <div class="container">
-            <h3>Registration Terms</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi in possimus illo, excepturi consequuntur consectetur commodi tenetur? Voluptates ratione sed, voluptas ducimus nesciunt ea veniam, architecto praesentium aliquid magni quisquam?
-            </p>
-        </div>
-    </section> -->
+    <section class="terms-sec">
+      <h2 class="section-title">Registration Terms</h2>
+      <p class="terms-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi in possimus illo, excepturi consequuntur consectetur commodi tenetur? Voluptates ratione sed, voluptas ducimus nesciunt ea veniam, architecto praesentium aliquid magni quisquam?</p>
+    </section>
     <!-- End Terms Section -->
 
     <!-- Start Form -->
     <div class="registration-form">
         <div class="tabs">
-          <button class="tablink " onclick="openForm(event,'volunteers')">Volunteers</button>
+          <button class="tablink" onclick="openForm(event,'volunteers')">Volunteers</button>
           <button class="tablink active" onclick="openForm(event,'visitors')">Visitors</button>
           <button class="tablink" onclick="openForm(event,'speakers')">Speakers</button>
         </div>
@@ -134,15 +128,14 @@
             <input type="file" id="photo" name="photo" accept="image/*" required>
             <button type="submit">Submit</button>
           </form>
-        </div>
-      
-        <!-- End Form -->
-    </main>
+        </div>    
+    <!-- End Form -->
+  </main>
 
-    <!--     FOOTER      -->
-    <footer-component></footer-component>
+  <!--     FOOTER      -->
+  <footer-component></footer-component>
 
-    <script src="./js/main.js" defer></script>
-    <script src="./js/navigationBar.js" defer></script>
+  <script src="./js/main.js" defer></script>
+  <script src="./js/navigationBar.js" defer></script>
 </body>
 </html>

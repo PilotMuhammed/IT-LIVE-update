@@ -1,106 +1,90 @@
-/* --- Section First Register --- */
-.sec-first-register {
-}
-
-.sec-first-register .container {
+/* ---  First Section Register --- */
+/*    EVENT DATE  */
+.eventDate-sec>*{
   text-align: center;
-  /* line-height: 50px; */
+  margin-bottom: .5em;
+  font-weight: bold;
 }
-
-.sec-first-register .container > * {
-  margin: 0%;
-  padding: 0%;
-  box-sizing: border-box;
+.eventDate-sec h2 {
+    font-size: 3rem;
+    color: var(--Red);
 }
-
-.sec-first-register .container h3 {
-  font-size: 50px;
-  color: var(--Red);
-  font-weight: 600;
-}
-
-.sec-first-register .container p {
-  font-size: 25px;
+.eventDate-sec p {
+  font-size: 1.6rem;
   color: var(--Gray);
 }
-
-@media (max-width: 750px) {
-  .sec-first-register .container h3 {
-    font-size: 25px;
-  }
-
-  .sec-first-register .container p {
-    font-size: 12px;
-    color: var(--Gray);
-  }
+.eventDate-deadline{
+  border-bottom: 3px var(--Red) solid;
+}
+@media (max-width:750px) {
+    .eventDate-sec h2 {
+        font-size: 30px;
+    }
+    .eventDate-sec p {
+        font-size: 12px;
+    }
 }
 
-/* --- Section Second Register --- */
-.sec-second-register {
-}
-
-.sec-second-register .container {
-}
-
-.sec-second-register .container h3 {
-  margin-top: 60px;
-  margin-bottom: 15px;
-  color: var(--Gray);
-}
-
-.sec-second-register .container p {
-  display: flex;
-  color: var(--Gray);
+/* --- Terms Section --- */
+.terms-desc{
+  text-align: justify;
 }
 
 /* ---- Start Section Form ---- */
 .registration-form {
   max-width: 600px;
   margin: 6px auto;
-  padding: 20px;
-  background-color: #f1f1f1;
-  /* background-color: var(--LightGray); */
+  background-color: var(--White);
   margin-bottom: 60px;
-  border-radius: 4px;
+  border-radius: 20px;
+  box-shadow: var(--Shadow);
+  overflow: hidden;
 }
-
+@media (width < 768px) {
+  .registration-form {
+    border-radius: 0;
+    max-width: 100%;
+  }
+}
 .tabs {
   display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+  background-color: inherit;
+  height: 50px;
+  box-shadow: var(--NavShadow);
 }
 
 .tablink {
-  padding: 12px 24px;
-  background-color: #ddd;
+  width: calc(100% / 3);
   border: none;
+  outline: none;
   cursor: pointer;
+  background-color: inherit;
   transition: background-color 0.3s ease;
 }
 
-.tablink:hover {
-  /* background-color: #aaa; */
+.tablink.active{
+  background-color: var(--Soft-red);
+  color: var(--White);
+}
+.tablink:hover, .tablink:focus{
   background-color: var(--Red);
   color: var(--White);
 }
-
-.tablink.active {
-  /* background-color: #ccc; */
-  background-color: var(--Gray);
-  color: var(--White);
-}
-
 .tabcontent {
   display: none;
+  padding: 30px;
 }
-
 .tabcontent.active {
   display: block;
+}
+.tabcontent h2{
+  margin-bottom: 20px;
 }
 
 form {
   display: flex;
   flex-direction: column;
+  justify-content: stretch;
 }
 
 label {
@@ -108,52 +92,43 @@ label {
   font-weight: bold;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
+input, textarea, select, button[type="submit"]{
+  border: 3px var(--LightGray) solid;
+  outline: none;
+  border-radius: 8px;
   padding: 10px;
-  border: none;
-  border-radius: 4px;
-  margin-bottom: 20px;
-}
-
-select {
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
   margin-bottom: 20px;
 }
 
 button[type="submit"] {
   background-color: var(--Red);
   color: var(--White);
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  border: none;
 }
 
-button[type="submit"]:hover {
-  /* background-color: var(--Gray); */
-  /* color: var(--Red); */
+button[type="submit"]:hover, button[type="submit"]:active, button[type="submit"]:focus{
+  background-color: var(--Very-dark-blue);
 }
 
 input[type="file"] {
   padding: 8px;
   align-self: center;
 }
-
+input[type="file"],input[type="file"]:hover, input[type="file"]:active, input[type="file"]:focus{
+  border: none;
+}
+input,select,textarea,button{
+  font-family: inherit;
+}
+input:focus, textarea:focus, select:focus, input:hover, textarea:hover, select:hover{
+  border: 3px var(--Soft-red) solid;
+}
 /* ---- End Section Form ---- */
-
-/* Style Page News */
-.sec-first-news {
-  /* height: 80vh; */
-}
-
-.sec-first-news .line-one {
-}
 
 .img-movie {
   width: auto;
@@ -161,11 +136,4 @@ input[type="file"] {
   margin-left: 15px;
   margin-right: 15px;
   border-radius: var(--Radius);
-}
-
-.sec-first-news .line-two {
-}
-
-#mar {
-  margin-top: 40px;
 }
