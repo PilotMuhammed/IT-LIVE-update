@@ -15,13 +15,11 @@ footer{
     gap: 15px;
 }
 .social-accounts li a{
-    height: 30px;
-    width: 30px;
+    width: 20px;
     display: inline-block;
 }
 .social-accounts li a img{
     max-width: 100%;
-    height: auto;
 }
 
 /* MOBILE SCREEN */

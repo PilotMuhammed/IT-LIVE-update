@@ -33,36 +33,59 @@
     --Bold:800;
 }
 
+    /* Layout */
 html {
     scroll-behavior: smooth;
     font-size: 16px;
 }
-
 * {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
 }
-
 a {
     text-decoration: none;
     color: inherit;
 }
-
+ul{
+    list-style: none;
+}
+ul.h-dir>li, ol.h-dir>li{
+    display: inline-block;
+}
+img.full{
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
 body {
     transition: 0.3s ease-out;
     font-family: 'Inter', sans-serif;
-    background-color: var(--White);
+    background-color: var(--Off-white);
     min-height: 100vh;
 }
 
-main {
-    padding: 0px;
+@media (width > 1024px) {
+    section {
+        padding: 5rem 15%;
+    }
 }
-
-section {
-    padding: 100px 50px;
+@media (width <= 1024px) {
+    section {
+        padding: 4rem 10%;
+    }
 }
+@media (width < 768px) {
+    section {
+        padding: 4rem 10%;
+    }
+}
+@media (width <= 520px) {
+    section {
+        padding: 5rem 30px;
+    }
+}
+    /* Buttons */
 .btn {
     cursor: pointer;
     display: inline-block;
@@ -71,7 +94,6 @@ section {
     font-size: 16px;
     padding: 5px;
     text-transform: uppercase;
-    /* margin: 0 15px; */
 }
 .txt2X {
     font-size: 24px;
@@ -99,6 +121,7 @@ section {
     color: var(--Red);
     font-size: 24px;
 }
+
 /*  Style Class Public Title Section */
 .section-title {
     margin-bottom: 30px;
@@ -167,4 +190,8 @@ section {
 ::-webkit-scrollbar-thumb {
     background: var(--LightGray);
     /* border-radius: 5px; */
+}
+
+.hide-scrollbar::-webkit-scrollbar{
+    display: none;
 }

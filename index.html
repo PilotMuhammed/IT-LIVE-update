@@ -11,67 +11,42 @@
     <link rel="stylesheet" href="./css/master.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
-    <script defer src="./components/header.js"></script>
-    <script defer src="./components/footer.js"></script>
+    <script type="text/javascript" defer src="./components/header.js"></script>
+    <script type="text/javascript" defer src="./components/footer.js"></script>
 
 </head>
-
 <body>
     <!--     Navigation   -->
     <header-component></header-component>
 
-
     <!--    START CAROUSEL SLIDER   -->
-    <div class="slider">
-        <!--radio buttons start-->
-        <input type="radio" name="radio-btn" id="radio1">
-        <input type="radio" name="radio-btn" id="radio2">
-        <input type="radio" name="radio-btn" id="radio3">
-        <!--radio buttons end-->
-
-        <!--slide images start-->
-        <div class="slides">
-            <div class="slide first">
-                <img src="./assets/images/1.jpg" alt="audience">
-            </div>
-            <div class="slide second">
-                <img src="./assets/images/2.jpg" alt="musican on stage with sponsors on big screen">
-            </div>
-            <div class="slide third">
-                <img src="./assets/images/3.jpg" alt="volunteer watching">
-            </div>
-        </div>
-        <!--slide images end-->
-
-        <div class="gradient-bg"></div>
-
-        <!--slide paragraphes start-->
-        <div class="statements">
-            <div class="prg first">
+    <div class="overview-carousel">
+        <div class="overview-container scroll-inline hide-scrollbar" id="overviewScroller">
+            <div class="overview-slide">
+                <img src="./assets/images/1.jpg" class="full" alt="audience">
+                <div class="effect"></div>
                 <p>the biggest it gathering in iraq since 2017</p>
             </div>
-            <div class="prg">
-                <p>keeping pace with and transferring the latest technologies around the world in the field of
-                    programming,
-                    networks, artificial intelligence, data security and digital transformation</p>
+            <div class="overview-slide">
+                <img src="./assets/images/2.jpg" class="full" alt="musican on stage with sponsors on big screen">
+                <div class="effect"></div>
+                <p>keeping pace with and transferring the latest technologies around the world in the field of programming, networks, artificial intelligence, data security and digital transformation</p>
             </div>
-            <div class="prg">
+            <div class="overview-slide">
+                <img src="./assets/images/3.jpg" class="full" alt="volunteer watching">
+                <div class="effect"></div>
                 <p>with the participation of local and international companies and influential personalities</p>
             </div>
         </div>
-        <!--slide paragraphes end-->
-
-
-        <!--manual navigation start-->
-        <div class="navigation-manual">
-            <label for="radio1" class="manual-btn slideBtn1"></label>
-            <label for="radio2" class="manual-btn slideBtn2"></label>
-            <label for="radio3" class="manual-btn slideBtn3"></label>
-        </div>
-        <!--manual navigation end-->
+        <!-- <div class="overview-slides-color"></div> -->
+        <ul class="h-dir overview-controls">
+            <li><button class="slide-btn current" aria-colindex="0"></button></li>
+            <li><button class="slide-btn" aria-colindex="1"></button></li>
+            <li><button class="slide-btn" aria-colindex="2"></button></li>
+        </ul>
     </div>
-    <!--image slider end-->
-
+    <script src="./js/carousel.js" defer></script>
+    <!--    END CAROUSEL SLIDER   -->
 
     <!--    HOME PAGE CONTENT START FROM -MAIN-     -->
     <main>
@@ -81,21 +56,21 @@
                 <div class="line-bottom"></div>
                 <div class="text">
                     <h2 class="count" data-goal="1500">0</h2>
-                    <p>VISITOR</p>
+                    <strong>vistior</strong>
                 </div>
             </div>
             <div class="content-numbers">
                 <div class="line-bottom"></div>
                 <div class="text">
                     <h2 class="count" data-goal="120">0</h2>
-                    <p>VOLUNTEER</p>
+                    <strong>volunteer</strong>
                 </div>
             </div>
             <div class="content-numbers">
                 <div class="line-bottom"></div>
                 <div class="text">
                     <h2 class="count" data-goal="15">0</h2>
-                    <p>SPEAKER</p>
+                    <strong>speaker</strong>
                 </div>
             </div>
         </section>
@@ -157,65 +132,69 @@
         <!-- Start Section Speakers -->
         <section class="speakers-sec">
             <h2 class="section-title"><a href="">speakers</a></h2>
-            <div class="container scroll-inline">
-                <div class="speaker-card"><img src="./assets/images/person.jpg" alt="">
-                    <div class="speaker-info">
-                        <h3 class="speaker-name">speaker name</h3>
-                        <p class="speakr-position">speakr position</p>
+            <div class="speakers-slider">
+                <button class="scroll-btn" id="slideLeft">&#8592</button>
+                <button class="scroll-btn" id="slideRight">&#8594</button>
+                <div class="scroll-container scroll-inline hide-scrollbar" id="cardsContainer">
+                    <div class="speaker-card"><img src="./assets/images/person.jpg" alt="">
+                        <div class="speaker-info">
+                            <h3 class="speaker-name">speaker name</h3>
+                            <p class="speakr-position">speakr position</p>
+                        </div>
                     </div>
-                </div>
-                <div class="speaker-card"><img src="./assets/images/person.jpg" alt="">
-                    <div class="speaker-info">
-                        <h3 class="speaker-name">speaker name</h3>
-                        <p class="speakr-position">speakr position</p>
+                    <div class="speaker-card"><img src="./assets/images/person.jpg" alt="">
+                        <div class="speaker-info">
+                            <h3 class="speaker-name">speaker name</h3>
+                            <p class="speakr-position">speaker position</p>
+                        </div>
                     </div>
-                </div>
-                <div class="speaker-card"><img src="./assets/images/person.jpg" alt="">
-                    <div class="speaker-info">
-                        <h3 class="speaker-name">speaker name</h3>
-                        <p class="speakr-position">speakr position</p>
+                    <div class="speaker-card"><img src="./assets/images/person.jpg" alt="">
+                        <div class="speaker-info">
+                            <h3 class="speaker-name">speaker name</h3>
+                            <p class="speakr-position">speakr position</p>
+                        </div>
                     </div>
-                </div>
-                <div class="speaker-card"><img src="./assets/images/person.jpg" alt="">
-                    <div class="speaker-info">
-                        <h3 class="speaker-name">speaker name</h3>
-                        <p class="speakr-position">speakr position</p>
+                    <div class="speaker-card"><img src="./assets/images/person.jpg" alt="">
+                        <div class="speaker-info">
+                            <h3 class="speaker-name">speaker name</h3>
+                            <p class="speakr-position">speakr position</p>
+                        </div>
                     </div>
-                </div>
-                <div class="speaker-card"><img src="./assets/images/person.jpg" alt="">
-                    <div class="speaker-info">
-                        <h3 class="speaker-name">speaker name</h3>
-                        <p class="speakr-position">speakr position</p>
+                    <div class="speaker-card"><img src="./assets/images/person.jpg" alt="">
+                        <div class="speaker-info">
+                            <h3 class="speaker-name">speaker name</h3>
+                            <p class="speakr-position">speakr position</p>
+                        </div>
                     </div>
-                </div>
-                <div class="speaker-card"><img src="./assets/images/person.jpg" alt="">
-                    <div class="speaker-info">
-                        <h3 class="speaker-name">speaker name</h3>
-                        <p class="speakr-position">speakr position</p>
+                    <div class="speaker-card"><img src="./assets/images/person.jpg" alt="">
+                        <div class="speaker-info">
+                            <h3 class="speaker-name">speaker name</h3>
+                            <p class="speakr-position">speakr position</p>
+                        </div>
                     </div>
-                </div>
-                <div class="speaker-card"><img src="./assets/images/person.jpg" alt="">
-                    <div class="speaker-info">
-                        <h3 class="speaker-name">speaker name</h3>
-                        <p class="speakr-position">speakr position</p>
+                    <div class="speaker-card"><img src="./assets/images/person.jpg" alt="">
+                        <div class="speaker-info">
+                            <h3 class="speaker-name">speaker name</h3>
+                            <p class="speakr-position">speakr position</p>
+                        </div>
                     </div>
-                </div>
-                <div class="speaker-card"><img src="./assets/images/person.jpg" alt="">
-                    <div class="speaker-info">
-                        <h3 class="speaker-name">speaker name</h3>
-                        <p class="speakr-position">speakr position</p>
+                    <div class="speaker-card"><img src="./assets/images/person.jpg" alt="">
+                        <div class="speaker-info">
+                            <h3 class="speaker-name">speaker name</h3>
+                            <p class="speakr-position">speakr position</p>
+                        </div>
                     </div>
-                </div>
-                <div class="speaker-card"><img src="./assets/images/person.jpg" alt="">
-                    <div class="speaker-info">
-                        <h3 class="speaker-name">speaker name</h3>
-                        <p class="speakr-position">speakr position</p>
+                    <div class="speaker-card"><img src="./assets/images/person.jpg" alt="">
+                        <div class="speaker-info">
+                            <h3 class="speaker-name">speaker name</h3>
+                            <p class="speakr-position">speakr position</p>
+                        </div>
                     </div>
-                </div>
-                <div class="speaker-card"><img src="./assets/images/person.jpg" alt="">
-                    <div class="speaker-info">
-                        <h3 class="speaker-name">speaker name</h3>
-                        <p class="speakr-position">speakr position</p>
+                    <div class="speaker-card"><img src="./assets/images/person.jpg" alt="">
+                        <div class="speaker-info">
+                            <h3 class="speaker-name">speaker name</h3>
+                            <p class="speakr-position">speakr position</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -251,15 +230,13 @@
             </div>
         </section>
         <!-- End Section Sponsors -->
-
-
     </main>
 
     <!--     FOOTER      -->
     <footer-component></footer-component>
 
-    <script type="text/javascript" src="./js/script.js" defer></script>
-    <script src="./js/navigationBar.js" defer></script>
+    <script type="text/javascript" src="./js/numbersUp.js" defer></script>
+    <script type="text/javascript" src="./js/navigationBar.js" defer></script>
+    <script type="text/javascript" src="./js/hScroll.js" defer></script>
 </body>
-
 </html>

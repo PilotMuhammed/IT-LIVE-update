@@ -1,20 +1,9 @@
-//      CARSOL SLIDER AUTO MOVE
-
-let counter = 1;
-setInterval(() => {
-  document.getElementById("radio" + counter).checked = true;
-  counter++;
-  if (counter > 3) {
-    counter = 1;
-  }
-}, 5000);
-
 let numberColor = document.getElementsByClassName("line-bottom");
 let numberCount = document.querySelectorAll(".content-numbers .count");
 let numbersSection = document.querySelector(".numbers-sec");
 let started = false;
 
-window.onscroll = function () {
+window.onscroll = () => {
   if (window.scrollY >= numbersSection.offsetHeight) {
     if (!started) {
       for (let i = 0; i < numberCount.length; i++) {
