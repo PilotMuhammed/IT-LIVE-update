@@ -42,6 +42,7 @@ html {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 a {
     text-decoration: none;
@@ -164,15 +165,14 @@ body {
 /*     SCROLL STYLE    */
 .scroll-inline {
     scroll-snap-type: inline mandatory;
-    scroll-padding-inline: 1rem;
-}
-.scroll-inline>* {
-    scroll-snap-align: start;
 }
 .scroll-Y {
     scroll-snap-type: mandatory;
 }
-.scroll-Y>* {
+.scroll-padding {
+    scroll-padding-inline: 1rem;
+}
+.scroll-inline>*, .scroll-Y>* {
     scroll-snap-align: start;
 }
 /* Scroll width */

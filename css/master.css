@@ -4,22 +4,26 @@
 .overview-container{
     overflow-x: scroll;
     white-space: nowrap;
+    font-size: 0%;
+    scroll-behavior: smooth;
 }
 .overview-slide{
     display: inline-block;
     overflow: hidden;
     position: relative;
+    width: 100vw;
     height: 100vh;
+}
+.overview-slide img{
+    filter: brightness(50%);
 }
 .overview-slide .effect{
     position: absolute;
     top: 0%;
     left: 0%;
-    width: 100vw;
+    width: inherit;
     height: 100vh;
-    /* background-color: rgba(255, 0, 0, 0.5); */
-    background: linear-gradient(60deg, rgba(0, 0, 0, 0.9) 0%, rgba(224, 0, 0, 0.7) 100%);
-    /* backdrop-filter: blure(100%); */
+    background: linear-gradient(60deg, rgba(0, 0, 0, 0.7) 0%, rgba(224, 0, 0, 0.5) 100%);
 }
 .overview-slide p{
     position: absolute;
@@ -47,11 +51,12 @@
     border-radius: 8px;
     margin-inline: 2px;
     transition: all .5s ease;
-    background-color: var(--LightGray);
+    background-color: var(--White);
+    opacity: .5;
 }
 .slide-btn:active, .slide-btn:focus-visible{
-    background-color: var(--White);
     outline-color: var(--Red);
+    opacity: 1;
 }
 .slide-btn.current{
     width: 45px;
@@ -74,10 +79,10 @@
 /*   Numbers   */
 .numbers-sec {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 20%);
+    place-content: center;
     gap: 30px;
 }
-
 .content-numbers {
     width: 100%;
     aspect-ratio: 1/1;
@@ -95,10 +100,10 @@
     z-index: 1;
 }
 .content-numbers .text>h2{
-    font-size: 5vw;
+    font-size: 4vw;
 }
 .content-numbers .text>h2+*{
-    font-size: 4vw;
+    font-size: 3vw;
 }
 .line-bottom {
     background-color: var(--Red);
@@ -116,16 +121,10 @@
         width: 100px;
         height: 100px;
     }
-
-    .numbers-sec {
-        /* margin-bottom: 40px; */
-    }
 }
 
 /*    EVENT DATE  */
 .eventDate-sec {
-    /* margin-top: 100px; */
-    /* margin-bottom: 100px; */
 }
 
 .eventDate-sec .container {
@@ -143,11 +142,6 @@
 }
 
 @media (max-width:750px) {
-    .eventDate-sec {
-        /* margin-top: 50px; */
-        /* margin-bottom: 50px; */
-    }
-
     .eventDate-sec .container h3 {
         font-size: 30px;
     }
@@ -197,7 +191,6 @@
     background-color: var(--Very-dark-blue);
     padding: 30px;
     min-width: 300px;
-    /* margin: 50px 0; */
 }
 .new-title{
     color: var(--Soft-orange);
@@ -207,6 +200,7 @@
 }
 .new-sec h3{
     color: white;
+    margin: .5rem 0%;
 }
 .new-sec h3:hover, .new-sec h3:active, .new-sec h3 a:focus{
     color: var(--Soft-orange);
@@ -226,10 +220,6 @@
 /* LAPTOP SCREEN*/
 @media (width > 767px) {
     .news-container{
-        display: flex;
-        gap: 30px;
-    }
-    .news-sec .landing-content{
         display: flex;
         gap: 30px;
     }
@@ -273,6 +263,7 @@
     align-items: center;
     gap: 50px;
     overflow-x: scroll;
+    scroll-behavior: smooth;
 }
 .speaker-card {
     min-width: calc(33% - 50px);
@@ -380,12 +371,29 @@
 }
 @media (width >= 768px) {
     .slide-btn:hover{
-        background-color: var(--White);
+        opacity: 1;
     }
 }
 @media (width < 768px) {
+    .overview-slide{
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+        width: 100vw;
+        height: 35vh;
+    }
     .overview-slide p{
         font-size: 2rem;
+    }
+    .overview-controls{
+        bottom: 10px;
+    }
+    .slide-btn{
+        width: 10px;
+        height: 10px;
+    }
+    .slide-btn.current{
+        width: 30px;
     }
     section {
         padding: 4rem 10%;
