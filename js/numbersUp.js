@@ -1,8 +1,7 @@
-let numberColor = document.getElementsByClassName("line-bottom");
-let numberCount = document.querySelectorAll(".content-numbers .count");
-let numbersSection = document.querySelector(".numbers-sec");
-let started = false;
-
+let numberColor = document.getElementsByClassName("line-bottom"),
+  numberCount = document.querySelectorAll(".content-numbers .count"),
+  numbersSection = document.querySelector(".numbers-sec"),
+  started = false;
 window.onscroll = () => {
   if (window.scrollY >= numbersSection.offsetHeight) {
     if (!started) {
@@ -13,7 +12,6 @@ window.onscroll = () => {
     started = true;
   }
 };
-
 function startCount(i){
     let goal = numberCount[i].dataset.goal;
     let count = setInterval(()=>{
