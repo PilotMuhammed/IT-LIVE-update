@@ -300,7 +300,6 @@
     /*   SPEAKER PROFILE    */
 .speaker-profile{
     width: 70vw;
-    min-height: 50vh;
     max-height: 80vh;
     margin: auto;
     border: none;
@@ -370,6 +369,9 @@
     width: 20px;
     aspect-ratio: 1/1;
 }
+.contact-icon[href='false']{
+    display: none;
+}
 .profile-bio{
     padding: 30px 30px 60px;
 }
@@ -410,7 +412,7 @@
     .speaker-profile[open]{
         animation: scaleUp .2s ease-out forwards;
     }
-    .speaker-profile:has(.profile-close[data-state="closing"]){
+    .speaker-profile:has(.profile-close[data-state="close"]){
         animation: scaleDown .2s ease-out forwards;
     }
 }
@@ -418,15 +420,15 @@
     .speaker-profile{
         max-width: 100vw;
         width: 100vw;
+        height: 80vh;
         border-radius: 25px 25px 0% 0%;
         top: auto;
-        /* bottom: 0%; */
         padding-bottom: 60px;
     }
     .speaker-profile[open]{
         animation: slideUp .5s ease-out forwards;
     }
-    .speaker-profile:has(.profile-close[data-state="closing"]){
+    .speaker-profile:has(.profile-close[data-state="close"]){
         animation: slideDown .5s ease-out forwards;
     }
 }
