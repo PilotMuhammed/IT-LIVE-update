@@ -163,6 +163,7 @@ function closeMenu(){
 }
 
 //      Show Speaker Profile        //
+//  - Open Event
 function openProfile(i){
     closeDialog.setAttribute("data-state","open");
     document.body.style.overflow="hidden";
@@ -186,7 +187,6 @@ function openProfile(i){
     `;
     dialog.showModal();
 }
-//  - Open Event
 for (let i = 0; i < speakerCards.length; i++) {
     const c = speakerCards[i];
     c.addEventListener('click',()=> openProfile(i))
@@ -206,12 +206,13 @@ function closeProfile(){
         document.body.style.overflow="auto"
     }, {once: true})
 }
-let moveY, startY, swipeAmount = dialog.clientHeight / 3; 
+let moveY, startY, swipeAmount; 
 dialog.addEventListener('touchstart',e=>{
     startY = e.touches[0].clientY;
 });
 dialog.addEventListener('touchmove',e=>{
+    swipeAmount = dialog.clientHeight / 5;
     moveY = e.touches[0].clientY;
-    if (startY + (dialog.clientHeight / 3) < moveY) closeProfile();
+    if (startY + swipeAmount < moveY) closeProfile();
 });
 document.getElementById("closeDialog").onclick = ()=>{closeProfile()};
