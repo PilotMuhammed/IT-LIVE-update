@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+
+    <link rel="icon" href="./assets/logos/logo.jpg" />
+    <link rel="stylesheet" href="./css/framework.css" />
+    <link rel="stylesheet" href="./css/register.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <script defer src="./components/header.js"></script>
+    <script defer src="./components/footer.js"></script>
+    <script src="./js/form-register.js"></script>
+  </head>
+  <body>
+    <!--     Navigation   -->
+    <header-component></header-component>
+    <main>
+      <!-- Start Event Date Section -->
+      <section class="eventDate-sec">
+        <h2>13-14 October</h2>
+        <p>09 am - 05 pm</p>
+        <p>
+          Registration
+          <span class="eventDate-deadline">Deadline - 1</span> October
+        </p>
+      </section>
+      <!-- End Event Date Section -->
+
+      <!-- Start Terms Section -->
+      <section class="terms-sec">
+        <h2 class="section-title">Registration Terms</h2>
+        <p class="terms-desc">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi in
+          possimus illo, excepturi consequuntur consectetur commodi tenetur?
+          Voluptates ratione sed, voluptas ducimus nesciunt ea veniam,
+          architecto praesentium aliquid magni quisquam?
+        </p>
+      </section>
+      <!-- End Terms Section -->
+
+      <!-- Start Form -->
+      <div class="registration-form">
+        <!-- <div class="tabs">
+          <button class="tablink" onclick="openForm(event,'volunteers')">Volunteers</button>
+          <button class="tablink active" onclick="openForm(event,'visitors')">Visitors</button>
+          <button class="tablink" onclick="openForm(event,'speakers')">Speakers</button>
+        </div>
+        
+        <div id="volunteers" class="tabcontent active">
+          <h2>Volunteers Registration</h2>
+          <form action="/submit" method="post">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="number">Phone Number:</label>
+            <input type="tel" id="number" name="number" required>
+            <label for="work">Work:</label>
+            <input type="text" id="work" name="work" required>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        
+        <div id="visitors" class="tabcontent">
+          <h2>Visitors Registration</h2> -->
+        <form action="http://localhost:3000/submit-form" method="POST">
+          <label for="name"> Name:</label>
+          <span>this one</span>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="userType">Type:</label>
+            <select id="userType" name="userType" required>
+              <option value="">Select college</option>
+              <option value="visitors">Visitors</option>
+              <option value="volunteers">Volunteers</option>
+              <option value="speakers">Speakers</option>
+              </select>
+            <select id="college" name="college" required>
+              <option value="">Select college</option>
+              <option value="جامعة بغداد">جامعة بغداد</option>
+              <option value="">الجامعة المستنصرية</option>
+              <option value="">جامعة البصرة</option>
+              <option value="">جامعة الموصل</option>
+              <option value=""> الجامعة التكنولوجية</option>
+              <option value=""> جامعة الكوفة</option>
+              <option value=""> جامعة تكريت</option>
+              <option value=""> جامعة القادسية</option>
+              <option value=""> جامعة الأنبار</option>
+              <option value=""> الجامعة العراقية</option>
+              <option value="">جامعة بابل </option>
+              <option value="">جامعة النهرين </option>
+              <option value="">جامعة ديالى </option>
+              <option value=""> جامعة كربلاء</option>
+              <option value=""> جامعة ذي قار</option>
+              <option value=""> جامعة كركوك</option>
+              <option value=""> جامعة واسط</option>
+              <option value=""> جامعة ميسان</option>
+              <option value=""> جامعة المثنى</option>
+              <option value=""> جامعة سامراء</option>
+              <option value=""> جامعة سومر</option>
+              <option value=""> جامعة القاسم الخضراء</option>
+              <option value="">جامعة الفلوجة </option>
+              <option value=""> جامعة جابر بن حيان الطبية</option>
+              <option value="">جامعة البصرة للنفط والغاز </option>
+              <option value=""> جامعة الكرخ للعلوم</option>
+              <option value=""> جامعة تكنولوجيا المعلومات والاتصالات</option>
+              <option value=""> جامعة بغداد للبنات</option>
+              <option value="">جامعة نينوى </option>
+              <option value=""> جامعة الحمدانية</option>
+              <option value=""> جامعة تلعفر</option>
+              <option value=""> الجامعة التقنية الوسطى</option>
+              <option value="">الجامعة التقنية الجنوبية </option>
+              <option value="">الجامعة التقنية الشمالية </option>
+              <option value="">جامعة الفرات الأوسط التقنية </option>
+              <option value="">  جامعة ابن سينا للعلوم الطبية والصيدلانية </option>
+            </select>
+          <button type="submit">Submit</button>
+        </form>
+       <!--</div>
+
+      <div id="speakers" class="tabcontent">
+          <h2>Speakers Registration</h2>
+          <form action="/submit" method="post">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="number">Phone Number:</label>
+            <input type="tel" inputmode="tel" pattern="[0-9]+" id="number" name="number" required>
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+            <label for="description">About Yourself:</label>
+            <textarea id="description" name="description" required></textarea>
+            <label for="photo">Upload Photo:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+            <button type="submit">Submit</button>
+          </form>
+        </div>     -->
+      <!-- End Form -->
+    </main>
+
+    <!--     FOOTER      -->
+    <footer-component></footer-component>
+
+    <script src="./js/main.js" defer></script>
+    <script src="./js/navigationBar.js" defer></script>
+    <script src="./js/server.js"></script>
+  </body>
+</html>
