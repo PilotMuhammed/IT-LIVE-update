@@ -7,7 +7,7 @@ class Header extends HTMLElement {
       this.innerHTML = `
       <header>
         <h1 class="website-logo">
-            <a href="/">it.live</a>
+            <a href="./index.html">it.live</a>
         </h1>
         <button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Menu">
             <span class="visually-hidden">Menu</span>
@@ -15,7 +15,7 @@ class Header extends HTMLElement {
         </button>
         <nav class="primary-menu" id="primary-navigation" data-state="closed">
             <ul class="primary-navigation">
-                <li class="menu-item"><a href="/">home</a></li>
+                <li class="menu-item"><a href="./index.html">home</a></li>
                 <li class="menu-item"><a href="./news.html">news</a></li>
                 <li class="menu-item"><a href="./about.html">about</a></li>
             </ul>
